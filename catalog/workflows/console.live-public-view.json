@@ -1,0 +1,19 @@
+{
+  "id": "console.live-public-view",
+  "title": "Local live public world and visitor intake",
+  "capabilityId": "console.live-public-mirror",
+  "actor": "Authenticated platform and scoped agents",
+  "steps": [
+    "Establish authoritative scope and source",
+    "Perform the bounded action",
+    "Independently inspect saved outcome"
+  ],
+  "expectedOutcomes": [
+    "No private state crosses publication boundaries",
+    "Simulation cannot establish cloud verification"
+  ],
+  "tests": [
+    "tooling/features/live-view/live-view.test.ts",
+    "tooling/features/live-view/visitor-bridge.test.ts"
+  ]
+}

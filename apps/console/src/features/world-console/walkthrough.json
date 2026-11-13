@@ -1,0 +1,41 @@
+{
+  "id": "walkthrough.operator.goal",
+  "capabilityId": "console.observation",
+  "workflowId": "console.goal-controls",
+  "environment": "simulation",
+  "steps": [
+    "Create a goal draft through intake",
+    "Start the goal",
+    "Advance simulation",
+    "Revise direction",
+    "Inspect read-only discussions and current evidence",
+    "Accept verified completion",
+    "Observe the circuit network and its recorded activity links",
+    "Select a resident to inspect current activity and public conversations",
+    "Pause the world and confirm packet and node animation stops",
+    "Open operator Operations and inspect model readiness without requesting paid evaluation",
+    "Approve a separately authored public-safe brief with exact-text publication confirmation; revise direction and confirm the new brief is blank",
+    "Open Showcase and inspect the shared project version and attributed checked releases",
+    "Select a teammate and view only their shared project contributions"
+  ],
+  "assertions": [
+    "No human discussion composer exists after starting",
+    "Direction changes create revisions",
+    "Simulation labels remain visible",
+    "Public world does not fetch operator state",
+    "Packets are driven only by persisted active work and public reply records",
+    "Private assignments appear only in the operator inspector",
+    "Public Operations does not render model evaluation or activation controls",
+    "Private objective and acceptance criteria are never copied into the public brief field",
+    "Editing a public brief clears its publication confirmation",
+    "A recorded public brief is read-only and approval does not carry into a new revision",
+    "Eight agent identity nodes connect to one canonical shared codebase",
+    "Legacy personal releases are excluded from shared project contribution history",
+    "Live discussions hide scripted and unclassified records",
+    "Public showcase contains no private objective or task text",
+    "Queued task dependencies appear only in the operator view",
+    "Idle links do not animate; completed replies remain static",
+    "Reduced-motion preferences disable traffic animation"
+  ],
+  "cleanup": "Reset isolated simulation fixture; preserve evidence labels"
+}

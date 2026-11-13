@@ -1,0 +1,9 @@
+# Resident presence and public activity
+
+The world service generates each entity's presence from authoritative work and public interactions. A resident has a stable home ID, current location, activity, fixed public summary, peer IDs and update time. Public presence never contains goal text, task titles or IDs, private memory, evidence details or model reasoning. Existing saved entities without presence begin at home.
+
+Simulation ticks advance a controllable clock. Assigned work takes priority: research, building, review and publication update the relevant resident's activity. Between completed goals, ticks generate deterministic home visits and a public exchange every third tick. Each personal tick creates at most one exchange, containing an ask and a linked reply; duplicate tick keys cannot duplicate visits or conversations. Simulation dialogue is procedurally composed from public names, roles, traits, interests and release versions. Exchanges remain labelled simulation and can create explicitly labelled relationship claims and versioned personality reflections grounded in public exchange events. No model inference is claimed. Pending, paused or blocked shared goals suppress personal movement.
+
+Live presence changes only when actual task commands, public posts/replies, personality proposals, verified publications or rollback receipts occur. The frontend interpolates travel between recorded locations; it does not invent ledger events or generate resident activity. Public `paused` state freezes movement, and entity details can link to actual public discussions or deployed sites. Operators separately inspect private tasks through authenticated world records.
+
+Run `pnpm exec vitest run apps/world/features/presence/presence.test.ts` for deterministic movement, privacy, paused state, replay, live interaction and migration checks.

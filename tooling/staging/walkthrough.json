@@ -1,0 +1,18 @@
+{
+  "id": "walk.staging-configuration",
+  "workflowId": "wf.staging-provision",
+  "capabilityId": "cap.staging-configuration",
+  "environment": "local",
+  "commands": [
+    "pnpm exec tsx tooling/staging/cli.ts doctor",
+    "pnpm exec vitest run tests/integration/staging-configuration.test.ts"
+  ],
+  "assertions": [
+    "configuration rejects shared registrable domains and unpinned images",
+    "requested quotas do not enable live dispatch",
+    "existing subscription drift is rejected",
+    "provider inventory reuse performs no mutations"
+  ],
+  "cleanup": "No provider resources created; local checks only",
+  "cloudVerified": false
+}

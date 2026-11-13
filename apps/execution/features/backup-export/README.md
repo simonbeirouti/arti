@@ -1,0 +1,9 @@
+# execution.backup-export
+
+Backup retries retain their original backup ID. Execution authorizes the exact entity/barrier before reading private R2 exports, validates saved bytes, and returns their checksum without launching another Git sandbox. A cache miss reserves a new maintenance dispatch before generating output. Existing unknown costs remain reserved.
+
+Git exports require a bounded complete v2 SHA-1 bundle header with exactly one `refs/heads/main`, no prerequisites, and a pack payload. Restore still independently verifies Git objects. Application snapshots validate their record schema. Both exporters reread the immutable object after conditional creation, so a concurrent writer's retained bytes determine the returned receipt. Never return the checksum of discarded replacement bytes.
+
+Walkthrough: run `pnpm exec vitest run apps/execution/features/backup-export` and `pnpm test:execution-workers`. The fixtures demonstrate distinct regenerated bundle digests, malformed headers, bounded reads, and application snapshot retry preservation. These local tests do not establish a successful cloud backup.
+
+Shared project storage owners are resolved by `scope.ts` from authoritative world records. A registered project ID maps to its canonical `project.repository` for Git and its own application-data namespace for storage. The compatible export-row field `entityId` identifies this storage owner; it does not grant an agent identity, tools, or allowance. Execution still calls world backup-barrier/restore-permit authorization before touching exports, and sandbox Git commands receive only short-lived repository tokens. World orchestration must include project Git/application pairs separately from private agent memory snapshots. Local scope tests do not establish a verified cloud backup or restore.

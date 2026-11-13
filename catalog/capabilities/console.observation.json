@@ -1,0 +1,23 @@
+{
+  "id": "console.observation",
+  "title": "Goal observation and direction",
+  "owner": "apps/console",
+  "code": [
+    "apps/console"
+  ],
+  "dependencies": [
+    "world.authority"
+  ],
+  "workflows": [
+    "console.goal-controls"
+  ],
+  "guides": [
+    "console.observation.guide"
+  ],
+  "audience": [
+    "public",
+    "developer",
+    "agent",
+    "operator"
+  ]
+}

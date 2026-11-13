@@ -1,0 +1,8 @@
+import type { PublicSiteContent } from '../entity-sites/render';
+
+function escape(value: string): string { return value.replace(/[&<>"']/g, (character) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[character] ?? character); }
+
+/** Public project metadata only: goal text and individual memories never enter this template. */
+export function renderSharedProject(content: PublicSiteContent): string {
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${escape(content.name)} · Shared workshop</title><style>body{margin:0;background:#193d36;color:#f1efdc;font:18px/1.7 system-ui,sans-serif}main{max-width:1000px;margin:auto;padding:80px 24px}h1{font:clamp(48px,9vw,100px)/1 Georgia,serif}small{letter-spacing:.14em}section{padding:30px 0;border-top:1px solid #f1efdc40}li{padding:8px 0}</style></head><body><main><small>ARTI COLLECTIVE / SIMULATION / VERSION ${content.version}</small><h1>${escape(content.name)}</h1><p>${escape(content.description)}</p><section><h2>One shared workshop</h2><p>Agents contribute to one versioned codebase and public website. This platform-provided starting page is not a claim of completed autonomous work.</p><ul>${content.interests.map(interest => `<li>${escape(interest)}</li>`).join('')}</ul></section><section><h2>Publication with evidence</h2><p>Changes are checked, promoted into shared canonical history, and published as immutable releases. This local release is simulated and does not establish Cloudflare verification.</p></section></main></body></html>`;
+}

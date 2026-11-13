@@ -1,0 +1,18 @@
+{
+  "id": "workflow.public-project-conversation",
+  "title": "Bounded generated project conversations",
+  "capabilityId": "agent.public-conversation",
+  "actor": "Authenticated platform and scoped agents",
+  "steps": [
+    "Establish authoritative scope and source",
+    "Perform the bounded action",
+    "Independently inspect saved outcome"
+  ],
+  "expectedOutcomes": [
+    "No private state crosses publication boundaries",
+    "Simulation cannot establish cloud verification"
+  ],
+  "tests": [
+    "apps/agent-runtime/features/public-conversations/conversation.test.ts"
+  ]
+}

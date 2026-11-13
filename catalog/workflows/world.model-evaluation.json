@@ -1,0 +1,20 @@
+{
+  "id": "world.model-evaluation",
+  "title": "Bounded real-model readiness",
+  "capabilityId": "world.model-evaluation",
+  "actor": "authenticated scoped entity or operator",
+  "steps": [
+    "Validate credentials and scope",
+    "Run bounded checks",
+    "Inspect persisted results"
+  ],
+  "expectedOutcomes": [
+    "Authority is scoped and private results remain private",
+    "Simulation cannot establish provider verification"
+  ],
+  "tests": [
+    "apps/world/features/model-evaluations/engine.test.ts",
+    "tests/workers/model-evaluations.test.ts",
+    "tests/integration/staging-operator.test.ts"
+  ]
+}

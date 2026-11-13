@@ -1,0 +1,7 @@
+# Publish the fresh platform starting page
+
+The account-authenticated owner Workflow accepts only `{ "operation": "visitor-reset", "acknowledgement": "RESET_SHARED_WEBSITE" }`. Its own instance UUID identifies the reset; callers cannot choose source, actors, repositories, deployment IDs or reset IDs. Pause the configured live world and drain active agent/publication leases first.
+
+World authority verifies a private archive before clearing the public workspace, retains financial records and private goals, and holds a reset barrier throughout preparation. The fixed execution bootstrap appends the platform Hello World source to existing collective Git history, builds without credentials, checks staging and production content, then records an explicitly platform-authored version-one receipt. It uses at most the dedicated $0.05 preparation allowance; unknown provider costs remain reserved.
+
+A failed attempt leaves the barrier in place. Retry the same account Workflow instance/reset identity so retained source/bundle checkpoints and the canonical receipt can be recovered. Never invent an alternate reset ID to evade a failure or spending hold. Resume shared visitor work only after the canonical version-one production receipt and displayed page are verified. This baseline is a platform starter; subsequent agent review and publication evidence must establish autonomous contributions separately.

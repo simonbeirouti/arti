@@ -1,0 +1,21 @@
+{
+  "id": "world.goal-cycle",
+  "title": "Create, revise, verify and accept a shared goal",
+  "capabilityId": "world.authority",
+  "actor": "operator and scoped entity agents",
+  "steps": [
+    "Establish authenticated actor and current revision",
+    "Perform the scoped action",
+    "Check persisted result and evidence",
+    "Record result and applicable captures"
+  ],
+  "expectedOutcomes": [
+    "Canonical state matches the authorized action",
+    "Private records are excluded from public views",
+    "Simulation and live verification remain distinct"
+  ],
+  "tests": [
+    "tests/simulations/world.test.ts",
+    "apps/world/features/world-state/assignment.test.ts"
+  ]
+}

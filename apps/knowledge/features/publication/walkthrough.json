@@ -1,0 +1,18 @@
+{
+  "id": "knowledge.publication.walkthrough",
+  "capabilityId": "knowledge.catalogue",
+  "workflowId": "knowledge.catalogue-integrity",
+  "environment": "simulation",
+  "steps": [
+    "Validate canonical catalogue",
+    "Build public static assets",
+    "Search a public guide",
+    "Verify private fixture text is absent"
+  ],
+  "assertions": [
+    "Only public-audience guides are rendered",
+    "Untrusted HTML is escaped",
+    "Definition labels remain visible"
+  ],
+  "cleanup": "Remove rebuildable dist output if needed"
+}

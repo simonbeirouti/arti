@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "environment": "staging",
+  "prefix": "arti-staging",
+  "accountId": "REPLACE_WITH_32_HEX_ACCOUNT_ID",
+  "domains": {
+    "operator": {
+      "hostname": "console.your-trusted-domain.com",
+      "zoneId": "REPLACE_WITH_32_HEX_ZONE_ID"
+    },
+    "knowledge": {
+      "hostname": "knowledge.your-trusted-domain.com",
+      "zoneId": "REPLACE_WITH_32_HEX_ZONE_ID"
+    },
+    "entities": {
+      "hostname": "agents.your-separate-domain.net",
+      "zoneId": "REPLACE_WITH_32_HEX_ZONE_ID"
+    }
+  },
+  "access": {
+    "teamDomain": "your-team.cloudflareaccess.com",
+    "applicationId": "REPLACE_WITH_ACCESS_APPLICATION_UUID",
+    "audience": "REPLACE_WITH_ACCESS_APPLICATION_64_HEX_AUDIENCE",
+    "operatorEmails": [
+      "operator@your-trusted-domain.com"
+    ]
+  },
+  "approvedResearchHosts": [
+    "developers.cloudflare.com"
+  ],
+  "quotas": {
+    "dailyUsd": 5,
+    "entityDailyUsd": {
+      "steward": 1,
+      "moderator": 0.75,
+      "builder-1": 1,
+      "builder-2": 1,
+      "researcher": 1,
+      "archivist": 0.25,
+      "builder-3": 0,
+      "builder-4": 0
+    },
+    "maxConcurrentBuilds": 2
+  },
+  "buildImage": "registry.cloudflare.com/REPLACE_WITH_ACCOUNT_ID/arti-build@sha256:REPLACE_WITH_64_HEX_DIGEST"
+}

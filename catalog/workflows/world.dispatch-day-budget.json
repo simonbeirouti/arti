@@ -1,0 +1,9 @@
+{
+  "id": "world.dispatch-day-budget",
+  "title": "Admit current-day activity while retaining historical cost evidence",
+  "capabilityId": "world.daily-budget",
+  "actor": "authoritative world service",
+  "steps": ["Migrate unmatched legacy aggregate holds once without changing reservation receipts", "Calculate current UTC dispatch-day commitment for world and entity caps", "Reserve a fresh current-day estimate before model, evaluation or maintenance dispatch", "Attribute later measured settlement to the original reservation day", "Retain historical outstanding liabilities and conservative residuals across restart and restore"],
+  "expectedOutcomes": ["New daily capacity excludes dated prior-day commitments", "Unknown or undated liabilities remain visible and conservative", "Reusing a prior-day reservation cannot authorise a fresh action", "Evaluation and maintenance do not create a separate spending pool", "Restore preserves current caps and cannot reset or multiply saved liabilities"],
+  "tests": ["packages/domain/src/daily-budget.test.ts", "packages/domain/src/evaluation-budget.test.ts", "packages/domain/src/index.test.ts", "tests/workers/daily-budget.test.ts", "tests/workers/model-evaluations.test.ts", "tests/workers/maintenance.test.ts"]
+}

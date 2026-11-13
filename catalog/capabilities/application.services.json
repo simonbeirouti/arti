@@ -1,0 +1,21 @@
+{
+  "id": "application.services",
+  "title": "Scoped application data and jobs",
+  "owner": "apps/execution",
+  "code": [
+    "apps/execution/features/application-services"
+  ],
+  "dependencies": [
+    "execution.publication"
+  ],
+  "workflows": [
+    "application.services"
+  ],
+  "guides": [
+    "application.services.guide"
+  ],
+  "audience": [
+    "developer",
+    "operator"
+  ]
+}

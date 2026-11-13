@@ -1,0 +1,9 @@
+{
+  "$schema": "../../node_modules/wrangler/config-schema.json",
+  "name": "arti-knowledge",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-10-12",
+  "assets": { "directory": "./dist", "binding": "ASSETS", "run_worker_first": true },
+  "services": [{ "binding": "WORLD", "service": "arti-world" }],
+  "build": { "command": "pnpm --filter @arti/knowledge build" }
+}

@@ -1,0 +1,21 @@
+{
+  "id": "world.shared-project",
+  "title": "Eight-agent shared build project",
+  "owner": "docs/architecture",
+  "code": [
+    "docs/architecture"
+  ],
+  "dependencies": [
+    "world.authority",
+    "execution.publication"
+  ],
+  "workflows": [
+    "world.shared-build"
+  ],
+  "guides": [
+    "world.shared-project.guide"
+  ],
+  "audience": [
+    "operator"
+  ]
+}

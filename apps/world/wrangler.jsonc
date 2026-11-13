@@ -1,0 +1,33 @@
+{
+  "name": "arti-world",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-10-12",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": { "directory": "../console/dist", "binding": "ASSETS", "not_found_handling": "single-page-application", "run_worker_first": ["/api/*"] },
+  "vars": {
+    "LIVE_ACTIVATED": "false",
+    "MODEL_EVALUATED": "false",
+    "AUTO_SIMULATION_TICKS": "false",
+    "BACKUPS_ENABLED": "false",
+    "BACKUP_ALLOWANCE_USD": "0",
+    "ALERTS_ENABLED": "false",
+    "ALERT_DELIVERY_AUTHORIZED": "false",
+    "EVALUATIONS_ENABLED": "false",
+    "EVALUATION_ALLOWANCE_USD": "0",
+    "ENVIRONMENT_NAME": "configure-environment",
+    "BACKUP_ENVIRONMENT": "configure-environment-and-domain-fingerprint"
+  },
+  "durable_objects": { "bindings": [
+    { "name": "WORLD", "class_name": "WorldDurableObject" },
+    { "name": "ENTITY_AGENT", "class_name": "EntityAgent", "script_name": "arti-agent-runtime" }
+  ] },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["WorldDurableObject"] }],
+  "ai": { "binding": "AI" },
+  "services": [{ "binding": "EXECUTION", "service": "arti-execution", "entrypoint": "ExecutionGateway" }],
+  "r2_buckets": [{ "binding": "WORLD_BACKUPS", "bucket_name": "arti-private-backups" }, { "binding": "WORLD_BUILDS", "bucket_name": "arti-private-builds" }],
+  "queues": {
+    "producers": [{ "binding": "PROJECTIONS", "queue": "arti-public-projections" }],
+    "consumers": [{ "queue": "arti-public-projections", "max_batch_size": 20, "max_retries": 5, "dead_letter_queue": "arti-public-projections-dead" }, { "queue": "arti-public-projections-dead", "max_batch_size": 20 }]
+  },
+  "triggers": { "crons": ["* * * * *"] }
+}

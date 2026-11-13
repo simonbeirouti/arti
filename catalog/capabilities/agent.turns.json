@@ -1,0 +1,23 @@
+{
+  "id": "agent.turns",
+  "title": "Persistent agent turns",
+  "owner": "apps/agent-runtime",
+  "code": [
+    "apps/agent-runtime"
+  ],
+  "dependencies": [
+    "world.authority"
+  ],
+  "workflows": [
+    "agent.bounded-turn"
+  ],
+  "guides": [
+    "agent.turns.guide"
+  ],
+  "audience": [
+    "public",
+    "developer",
+    "agent",
+    "operator"
+  ]
+}

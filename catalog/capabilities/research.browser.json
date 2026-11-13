@@ -1,0 +1,21 @@
+{
+  "id": "research.browser",
+  "title": "Private browser research",
+  "owner": "apps/execution",
+  "code": [
+    "apps/execution/features/browser-research"
+  ],
+  "dependencies": [
+    "execution.publication"
+  ],
+  "workflows": [
+    "research.browser"
+  ],
+  "guides": [
+    "research.browser.guide"
+  ],
+  "audience": [
+    "agent",
+    "operator"
+  ]
+}

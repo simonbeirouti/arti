@@ -1,0 +1,7 @@
+{
+  "id": "workflow.public-project-conversation",
+  "capabilityId": "agent.public-conversation",
+  "mode": "simulation",
+  "command": "pnpm exec vitest run apps/agent-runtime/features/public-conversations/conversation.test.ts",
+  "assertions": ["Only bounded public context enters inference", "Server controls actor, command and reply target", "Unknown delivery retains the original idempotency key", "Simulated evidence is not cloud verification"]
+}

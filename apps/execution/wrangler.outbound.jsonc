@@ -1,0 +1,8 @@
+{
+  "$schema": "../../node_modules/wrangler/config-schema.json",
+  "name": "arti-generated-outbound",
+  "main": "features/application-services/outbound.ts",
+  "compatibility_date": "2026-10-12",
+  "workers_dev": false,
+  "observability": { "enabled": true }
+}

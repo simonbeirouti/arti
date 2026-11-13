@@ -1,0 +1,22 @@
+{
+  "id": "agent.memory",
+  "title": "Private entity memory and replay recovery",
+  "owner": "apps/agent-runtime",
+  "code": [
+    "apps/agent-runtime"
+  ],
+  "dependencies": [
+    "world.authority"
+  ],
+  "workflows": [
+    "agent.memory-recovery"
+  ],
+  "guides": [
+    "agent.memory.guide"
+  ],
+  "audience": [
+    "developer",
+    "operator",
+    "agent"
+  ]
+}

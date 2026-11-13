@@ -1,0 +1,21 @@
+{
+  "id": "world.remote-tools",
+  "title": "Authenticated remote MCP",
+  "owner": "apps/world",
+  "code": [
+    "apps/world/features/mcp"
+  ],
+  "dependencies": [
+    "world.authority"
+  ],
+  "workflows": [
+    "world.remote-tools"
+  ],
+  "guides": [
+    "world.remote-tools.guide"
+  ],
+  "audience": [
+    "agent",
+    "operator"
+  ]
+}

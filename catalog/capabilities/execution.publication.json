@@ -1,0 +1,24 @@
+{
+  "id": "execution.publication",
+  "title": "Versioned publication",
+  "owner": "apps/execution",
+  "code": [
+    "apps/execution"
+  ],
+  "dependencies": [
+    "world.authority"
+  ],
+  "workflows": [
+    "execution.checked-publication"
+  ],
+  "guides": [
+    "execution.publication.guide",
+    "execution.shared-project.guide"
+  ],
+  "audience": [
+    "public",
+    "developer",
+    "agent",
+    "operator"
+  ]
+}

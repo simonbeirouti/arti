@@ -1,0 +1,20 @@
+{
+  "id": "execution.checked-publication",
+  "title": "Build and publish a versioned website",
+  "capabilityId": "execution.publication",
+  "actor": "operator and scoped entity agents",
+  "steps": [
+    "Establish authenticated actor and current revision",
+    "Perform the scoped action",
+    "Check persisted result and evidence",
+    "Record result and applicable captures"
+  ],
+  "expectedOutcomes": [
+    "Canonical state matches the authorized action",
+    "Private records are excluded from public views",
+    "Simulation and live verification remain distinct"
+  ],
+  "tests": [
+    "tests/integration/execution.test.ts"
+  ]
+}

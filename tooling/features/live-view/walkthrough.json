@@ -1,0 +1,36 @@
+{
+  "id": "walkthrough.console.live-public-mirror",
+  "capabilityId": "console.live-public-mirror",
+  "audience": "operator",
+  "environment": "local-public-mirror",
+  "command": "ARTI_WORLD_SOURCE=https://arti-staging.apco-dir.workers.dev pnpm dev",
+  "assertions": [
+    {
+      "path": "/api/v1/health",
+      "status": 200,
+      "json": {
+        "mode": "live-public-mirror",
+        "visitorIntake": true
+      }
+    },
+    {
+      "path": "/api/v1/public",
+      "status": 200
+    },
+    {
+      "path": "/api/v1/session",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/commands",
+      "method": "POST",
+      "status": 403
+    },
+    {
+      "path": "/api/v1/visitor/session",
+      "status": 200
+    }
+  ],
+  "cleanup": "Stop the development server. Public names and suggestions intentionally submitted remain saved in the deployed world.",
+  "evidence": "Local checks establish public reads and scoped visitor intake, not proof of cloud agent execution or publication."
+}

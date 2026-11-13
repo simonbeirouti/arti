@@ -1,0 +1,18 @@
+{
+  "id": "world.shared-build",
+  "title": "Eight-agent shared build project",
+  "capabilityId": "world.shared-project",
+  "actor": "Authenticated platform and scoped agents",
+  "steps": [
+    "Establish authoritative scope and source",
+    "Perform the bounded action",
+    "Independently inspect saved outcome"
+  ],
+  "expectedOutcomes": [
+    "No private state crosses publication boundaries",
+    "Simulation cannot establish cloud verification"
+  ],
+  "tests": [
+    "tests/integration/local-service.test.ts"
+  ]
+}

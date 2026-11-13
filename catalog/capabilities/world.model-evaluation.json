@@ -1,0 +1,22 @@
+{
+  "id": "world.model-evaluation",
+  "title": "Bounded real-model readiness",
+  "owner": "apps/world",
+  "code": [
+    "apps/world/features/model-evaluations",
+    "tooling/staging/operator-worker.ts",
+    "tooling/staging/operator-policy.ts"
+  ],
+  "dependencies": [
+    "world.authority"
+  ],
+  "workflows": [
+    "world.model-evaluation"
+  ],
+  "guides": [
+    "world.model-evaluation.guide"
+  ],
+  "audience": [
+    "operator"
+  ]
+}

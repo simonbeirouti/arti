@@ -1,0 +1,7 @@
+# Scoped private memory and recovery
+
+Each named EntityAgent owns its private state. `readMemory` and `remember` are internal RPC methods; the authenticated MCP gateway chooses the name from credentials. `remember` bounds input and updates an idle entity only. Memories are not exposed by world public projections.
+
+A bounded live turn persists a command and idempotency key before dispatch. Ambiguous interruptions retain that pending command for replay after eviction; the world returns the original receipt. Expired leases can be replaced, and a superseded turn cannot overwrite a new turn's memory. Backup export requires a paused world and a drained turn. Restore validates matching identity, preserves pending command keys and resets runtime leases. It never treats restored memory as an authorization grant.
+
+Optional durable turn continuation is included in private snapshots. It preserves current-session history, frozen scope/profile/instructions, logical tool limits and personal stage across independent invocations. Each resumed invocation receives a new ownership token; the logical turn ID remains stable. Retained private memory is not seeded into continuation history. Legacy snapshots omit continuation safely. An unresolved execution in-flight marker stays blocked across resumptions; idempotent pending world commands retain their original delivery keys. Byte guards reject oversized continuation/state rather than silently dropping private memory or code arguments.

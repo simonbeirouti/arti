@@ -1,0 +1,20 @@
+{
+  "id": "agent.public-conversation",
+  "title": "Bounded generated project conversations",
+  "owner": "apps/agent-runtime/features/public-conversations",
+  "code": [
+    "apps/agent-runtime/features/public-conversations"
+  ],
+  "dependencies": [
+    "world.authority"
+  ],
+  "workflows": [
+    "workflow.public-project-conversation"
+  ],
+  "guides": [
+    "agent.public-conversation.guide"
+  ],
+  "audience": [
+    "developer"
+  ]
+}

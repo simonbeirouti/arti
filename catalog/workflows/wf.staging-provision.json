@@ -1,0 +1,22 @@
+{
+  "id": "wf.staging-provision",
+  "title": "Validate, inspect and provision staging resources",
+  "capabilityId": "cap.staging-configuration",
+  "actor": "authenticated operator with explicit apply confirmation",
+  "steps": [
+    "Validate non-secret account configuration and isolated domains",
+    "Plan offline and inspect existing resources",
+    "Confirm explicit idempotent provisioning; seed only empty repositories",
+    "Generate disabled configurations and retain resource inventory"
+  ],
+  "expectedOutcomes": [
+    "Resources are environment-namespaced and existing drift fails closed",
+    "No provider secrets are emitted or installed into builds",
+    "Requested caps never implicitly activate live operation",
+    "Eight agent repositories and the collective repository retain existing history; all publication gates remain disabled"
+  ],
+  "tests": [
+    "tests/integration/staging-configuration.test.ts",
+    "tests/integration/staging-seed.test.ts"
+  ]
+}

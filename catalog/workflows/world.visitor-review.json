@@ -1,0 +1,9 @@
+{
+  "id": "world.visitor-review",
+  "title": "Review proposals and exact published visitor outcomes",
+  "capabilityId": "world.visitor-governance",
+  "actor": "server-selected moderator, researcher and steward",
+  "steps": ["Select a bounded public-only review action without interrupting build continuations", "Review and freeze proposals then collect independent structured votes", "Select the ranked eligible proposal only after the current goal completes", "Review checked task receipts independently before releasing dependencies", "Observe the exact active immutable production response without credentials or outbound requests", "Review each frozen criterion against actual public content and complete only with current independent evidence"],
+  "expectedOutcomes": ["Visitor inputs and model output cannot select actor or target identity", "Private operator revisions do not inherit public review authority", "Unknown command delivery retains its original key while confirmed stale commands clear", "Failed or inconclusive review keeps the goal unfinished with a public blocker", "Paid activity requires existing activation, release and budget gates", "Simulation and agent review never claim human or cloud verification"],
+  "tests": ["apps/world/features/visitor-governance/governance.test.ts", "apps/agent-runtime/features/visitor-governance/governance.test.ts", "apps/world/features/operations/scheduling.test.ts", "tests/workers/governance.test.ts"]
+}

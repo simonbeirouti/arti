@@ -1,0 +1,20 @@
+{
+  "id": "application.services",
+  "title": "Scoped application data and jobs",
+  "capabilityId": "application.services",
+  "actor": "authenticated scoped entity or operator",
+  "steps": [
+    "Validate credentials and scope",
+    "Run bounded checks",
+    "Inspect persisted results"
+  ],
+  "expectedOutcomes": [
+    "Authority is scoped and private results remain private",
+    "Simulation cannot establish provider verification"
+  ],
+  "tests": [
+    "apps/execution/features/application-services/manifest.test.ts",
+    "apps/execution/features/application-services/schedule.test.ts",
+    "apps/execution/features/application-services/data.worker.ts"
+  ]
+}

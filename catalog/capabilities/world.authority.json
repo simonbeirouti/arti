@@ -1,0 +1,22 @@
+{
+  "id": "world.authority",
+  "title": "World identity and authority",
+  "owner": "apps/world",
+  "code": [
+    "apps/world"
+  ],
+  "dependencies": [],
+  "workflows": [
+    "world.goal-cycle"
+  ],
+  "guides": [
+    "world.authority.guide",
+    "world.presence.guide"
+  ],
+  "audience": [
+    "public",
+    "developer",
+    "agent",
+    "operator"
+  ]
+}

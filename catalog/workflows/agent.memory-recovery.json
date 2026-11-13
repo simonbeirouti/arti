@@ -1,0 +1,20 @@
+{
+  "id": "agent.memory-recovery",
+  "title": "Private entity memory and replay recovery",
+  "capabilityId": "agent.memory",
+  "actor": "authenticated operator and trusted platform services",
+  "steps": [
+    "Pause and drain mutable work",
+    "Validate scoped records and immutable checksums",
+    "Apply or restore private state",
+    "Verify persisted results while paused"
+  ],
+  "expectedOutcomes": [
+    "Private state stays private",
+    "Incomplete recovery remains paused and retryable"
+  ],
+  "tests": [
+    "tests/workers/backup.test.ts",
+    "tests/workers/operations.test.ts"
+  ]
+}

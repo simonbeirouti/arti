@@ -1,0 +1,28 @@
+{
+  "id": "world.visitor-intake",
+  "title": "Public visitor suggestions",
+  "owner": "apps/world/features/visitor-http",
+  "code": [
+    "apps/world/features/visitor-http",
+    "apps/knowledge/src/index.ts",
+    "tooling/visitor-http.ts",
+    "apps/world/features/visitor-governance",
+    "apps/agent-runtime/features/visitor-governance",
+    "packages/domain/src/visitor-build.ts",
+    "packages/contracts/src/visitor-build.ts"
+  ],
+  "dependencies": [
+    "world.authority"
+  ],
+  "workflows": [
+    "world.visitor-suggestion"
+  ],
+  "guides": [
+    "world.visitor-intake.guide"
+  ],
+  "audience": [
+    "public",
+    "developer",
+    "operator"
+  ]
+}

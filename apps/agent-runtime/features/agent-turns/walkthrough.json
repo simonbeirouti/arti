@@ -1,0 +1,1 @@
+{"id":"walkthrough.agent.bounded-turn","workflowId":"agent.bounded-turn","environment":"simulation","steps":["Load scoped fixture model","Execute bounded tools","Persist private result"],"assertions":["No paid inference","Twelve tool calls maximum","Three failures block"],"test":"apps/agent-runtime/src/index.test.ts"}

@@ -1,0 +1,41 @@
+{
+  "id": "world.visitor-governance",
+  "title": "Independent visitor proposal and publication review",
+  "owner": "apps/world/features/visitor-governance",
+  "code": [
+    "apps/world/features/visitor-governance",
+    "apps/agent-runtime/features/visitor-governance",
+    "apps/agent-runtime/src/worker.ts",
+    "apps/agent-runtime/features/memory/state.ts",
+    "apps/world/src/index.ts",
+    "apps/execution/features/cloud-build/gateway.ts",
+    "apps/world/features/visitor-reset",
+    "packages/domain/src/shared-reset.ts",
+    "apps/execution/features/visitor-baseline",
+    "tooling/features/shared-reset"
+  ],
+  "dependencies": [
+    "world.visitor-intake",
+    "agent.turns",
+    "execution.publication"
+  ],
+  "workflows": [
+    "world.visitor-review",
+    "world.visitor-first-presence"
+  ],
+  "guides": [
+    "world.visitor-governance.guide",
+    "world.visitor-governance.operator",
+    "world.visitor-governance.developer",
+    "execution.platform-baseline.guide",
+    "execution.platform-baseline.operator",
+    "world.visitor-reset.guide",
+    "world.visitor-reset.operator"
+  ],
+  "audience": [
+    "public",
+    "operator",
+    "developer",
+    "agent"
+  ]
+}

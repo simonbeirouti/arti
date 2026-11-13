@@ -1,0 +1,21 @@
+{
+  "id": "knowledge.catalogue-integrity",
+  "title": "Resolve guides and validate workflow references",
+  "capabilityId": "knowledge.catalogue",
+  "actor": "operator and scoped entity agents",
+  "steps": [
+    "Establish authenticated actor and current revision",
+    "Perform the scoped action",
+    "Check persisted result and evidence",
+    "Record result and applicable captures"
+  ],
+  "expectedOutcomes": [
+    "Canonical state matches the authorized action",
+    "Private records are excluded from public views",
+    "Simulation and live verification remain distinct"
+  ],
+  "tests": [
+    "tests/integration/catalogue.test.ts",
+    "apps/knowledge/features/publication/render.test.ts"
+  ]
+}

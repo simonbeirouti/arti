@@ -1,0 +1,35 @@
+{
+  "$schema": "../../node_modules/wrangler/config-schema.json",
+  "name": "arti-execution",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-10-12",
+  "compatibility_flags": ["nodejs_compat"],
+  "vars": {
+    "LIVE_ACTIVATED": "false",
+    "DAILY_ALLOWANCE_USD": "0",
+    "CLOUDFLARE_ACCOUNT_ID": "configure-account",
+    "ARTIFACTS_NAMESPACE": "arti",
+    "STAGING_NAMESPACE": "arti-staging",
+    "PRODUCTION_NAMESPACE": "arti-production",
+    "ENTITY_DOMAIN": "entities.invalid",
+    "RESEARCH_ALLOWED_HOSTS": "",
+    "EVALUATIONS_ENABLED": "false",
+    "BACKUPS_ENABLED": "false"
+  },
+  "browser": { "binding": "BROWSER" },
+  "triggers": { "crons": ["* * * * *"] },
+  "artifacts": [{ "binding": "ARTIFACTS", "namespace": "arti" }],
+  // Replace the zero account/digest with the registry-pinned build image before deployment.
+  "containers": [{ "class_name": "BuildSandbox", "scheduling_policy": "durable_object", "images": { "build": { "image": "registry.cloudflare.com/00000000000000000000000000000000/arti-build@sha256:0000000000000000000000000000000000000000000000000000000000000000" } } }],
+  "durable_objects": { "bindings": [
+    { "name": "APP_DATA", "class_name": "ApplicationStore" },
+    { "name": "BUILD_SANDBOX", "class_name": "BuildSandbox" },
+    { "name": "WORLD", "class_name": "WorldDurableObject", "script_name": "arti-world" }
+  ] },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["BuildSandbox"] }, { "tag": "v2", "new_sqlite_classes": ["ApplicationStore"] }],
+  "workflows": [{ "name": "arti-publication", "binding": "PUBLICATION", "class_name": "PublicationWorkflow" }],
+  "queues": { "consumers": [{ "queue": "arti-artifact-events", "max_batch_size": 1, "max_concurrency": 2, "dead_letter_queue": "arti-artifact-events-dead" }, { "queue": "arti-artifact-events-dead", "max_batch_size": 20 }] },
+  "r2_buckets": [{ "binding": "BUILDS", "bucket_name": "arti-private-builds" }],
+  "dispatch_namespaces": [{ "binding": "DISPATCH", "namespace": "arti-production", "outbound": { "service": "arti-generated-outbound" } }, { "binding": "STAGING", "namespace": "arti-staging", "outbound": { "service": "arti-generated-outbound" } }],
+  "observability": { "enabled": true }
+}

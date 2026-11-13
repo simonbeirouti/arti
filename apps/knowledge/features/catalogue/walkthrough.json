@@ -1,0 +1,10 @@
+{
+  "id": "knowledge.catalogue-integrity",
+  "audience": "public",
+  "steps": [
+    { "action": "Open http://localhost:4174", "assert": "Canonical public guides are rendered" },
+    { "action": "Search for evidence", "assert": "Matching public guides remain visible" },
+    { "action": "Inspect catalogue validation", "assert": "All IDs and file references resolve" }
+  ],
+  "verification": "definition"
+}

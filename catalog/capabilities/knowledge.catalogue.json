@@ -1,0 +1,26 @@
+{
+  "id": "knowledge.catalogue",
+  "title": "Canonical knowledge and evidence",
+  "owner": "apps/knowledge",
+  "code": [
+    "apps/knowledge"
+  ],
+  "dependencies": [
+    "world.authority"
+  ],
+  "workflows": [
+    "knowledge.catalogue-integrity"
+  ],
+  "guides": [
+    "knowledge.catalogue.guide",
+    "knowledge.publication.developer",
+    "platform.developer",
+    "knowledge.evidence.developer"
+  ],
+  "audience": [
+    "public",
+    "developer",
+    "agent",
+    "operator"
+  ]
+}

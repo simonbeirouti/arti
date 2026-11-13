@@ -1,0 +1,22 @@
+{
+  "id": "world.operations",
+  "title": "Private recovery and measured operations",
+  "owner": "apps/world",
+  "code": [
+    "apps/world"
+  ],
+  "dependencies": [
+    "world.authority"
+  ],
+  "workflows": [
+    "world.complete-recovery"
+  ],
+  "guides": [
+    "world.operations.guide"
+  ],
+  "audience": [
+    "developer",
+    "operator",
+    "agent"
+  ]
+}

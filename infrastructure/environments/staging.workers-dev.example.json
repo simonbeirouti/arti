@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "environment": "staging",
+  "prefix": "arti-staging",
+  "accountId": "REPLACE_WITH_32_HEX_ACCOUNT_ID",
+  "domains": {
+    "operator": {
+      "hostname": "arti-staging-world.your-account.workers.dev"
+    },
+    "knowledge": {
+      "hostname": "arti-staging.your-account.workers.dev"
+    }
+  },
+  "access": {
+    "teamDomain": "your-team.cloudflareaccess.com",
+    "applicationId": "REPLACE_WITH_ACCESS_APPLICATION_UUID",
+    "audience": "REPLACE_WITH_ACCESS_APPLICATION_64_HEX_AUDIENCE",
+    "operatorEmails": [
+      "operator@your-trusted-domain.com"
+    ]
+  },
+  "approvedResearchHosts": [
+    "developers.cloudflare.com"
+  ],
+  "quotas": {
+    "dailyUsd": 5,
+    "entityDailyUsd": {
+      "steward": 1,
+      "moderator": 0.75,
+      "builder-1": 1,
+      "builder-2": 1,
+      "researcher": 1,
+      "archivist": 0.25,
+      "builder-3": 0,
+      "builder-4": 0
+    },
+    "maxConcurrentBuilds": 2
+  },
+  "hosting": "workers-dev",
+  "workersDevSubdomain": "your-account"
+}

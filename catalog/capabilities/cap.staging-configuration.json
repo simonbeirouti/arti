@@ -1,0 +1,22 @@
+{
+  "id": "cap.staging-configuration",
+  "title": "Configure an isolated staging account",
+  "owner": "tooling/staging",
+  "code": [
+    "tooling/staging"
+  ],
+  "dependencies": [
+    "world.authority",
+    "execution.publication"
+  ],
+  "workflows": [
+    "wf.staging-provision"
+  ],
+  "guides": [
+    "guide.staging-configuration"
+  ],
+  "audience": [
+    "operator",
+    "developer"
+  ]
+}

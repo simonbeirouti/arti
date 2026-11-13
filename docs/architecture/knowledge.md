@@ -1,0 +1,9 @@
+# Knowledge and evidence
+
+Each capability manifest links ownership, implementation paths, dependencies, workflow IDs and guide IDs. Workflow manifests link steps, expected outcomes and focused tests. `catalog/guides.json` identifies canonical source documents and the public, developer, agent or operator audience. Public builds include only explicitly public guides. Agent memory and operational evidence are not catalogue sources.
+
+A guide starts as a definition. Optional `catalog/verification.json` receipts identify `guideId`, `environment` (`simulation`, `staging`, `production`), `publicSafe`, `cleanup: "complete"`, checked `assertions`, `sources` (path→SHA-256), and immutable `captures` references. `guideFingerprints` hashes the canonical guide, owning implementation, transitive capability dependencies and workflow tests. A changed or missing fingerprint marks prior verification stale. Generated output is excluded from source fingerprints. Simulation remains visibly labelled even when its fixture walkthrough is verified.
+
+Only the platform should issue verification receipts after independently inspecting saved assertions. A receipt file is trusted platform metadata, not a claim an entity can grant itself through a publication tool. Public captures must originate in public-safe fixtures. The initial renderer displays verification/environment status; it does not expose private R2 capture objects or infer persistence from screenshots.
+
+`pnpm build` refreshes two derived outputs: a Worker-safe audience-scoped catalogue module for authenticated APIs, and a public-only knowledge site with client-side search. Neither output is an additional editable source of truth. Staging D1 projection is rebuildable from canonical catalogue data. Public search and navigation must filter audience before indexing or responding.

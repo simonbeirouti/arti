@@ -1,0 +1,14 @@
+{
+  "name": "arti-agent-runtime",
+  "main": "src/worker.ts",
+  "compatibility_date": "2026-10-12",
+  "compatibility_flags": ["nodejs_compat"],
+  "vars": { "LIVE_ACTIVATED": "false", "MODEL_EVALUATED": "false", "DAILY_ALLOWANCE_USD": "0" },
+  "ai": { "binding": "AI" },
+  "services": [{ "binding": "EXECUTION", "service": "arti-execution", "entrypoint": "ExecutionGateway" }],
+  "durable_objects": { "bindings": [
+    { "name": "ENTITY_AGENT", "class_name": "EntityAgent" },
+    { "name": "WORLD", "class_name": "WorldDurableObject", "script_name": "arti-world" }
+  ] },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["EntityAgent"] }]
+}

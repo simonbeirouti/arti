@@ -1,0 +1,281 @@
+[
+  {
+    "id": "world.authority.guide",
+    "title": "World identity and authority",
+    "source": "apps/world/features/world-state/README.md",
+    "audience": "public",
+    "workflows": [
+      "world.goal-cycle"
+    ]
+  },
+  {
+    "id": "agent.turns.guide",
+    "title": "Persistent agent turns",
+    "source": "apps/agent-runtime/features/agent-turns/README.md",
+    "audience": "public",
+    "workflows": [
+      "agent.bounded-turn"
+    ]
+  },
+  {
+    "id": "execution.publication.guide",
+    "title": "Versioned publication",
+    "source": "apps/execution/features/publication/README.md",
+    "audience": "public",
+    "workflows": [
+      "execution.checked-publication"
+    ]
+  },
+  {
+    "id": "console.observation.guide",
+    "title": "Goal observation and direction",
+    "source": "apps/console/src/features/world-console/README.md",
+    "audience": "public",
+    "workflows": [
+      "console.goal-controls"
+    ]
+  },
+  {
+    "id": "knowledge.catalogue.guide",
+    "title": "Canonical knowledge and evidence",
+    "source": "apps/knowledge/features/catalogue/README.md",
+    "audience": "public",
+    "workflows": [
+      "knowledge.catalogue-integrity"
+    ]
+  },
+  {
+    "id": "knowledge.publication.developer",
+    "title": "Build public knowledge",
+    "source": "apps/knowledge/features/publication/guides/developer.md",
+    "audience": "developer",
+    "workflows": [
+      "knowledge.catalogue-integrity"
+    ]
+  },
+  {
+    "id": "world.operator",
+    "title": "Operate the world",
+    "source": "apps/world/features/world-state/guides/operator.md",
+    "audience": "operator",
+    "workflows": [
+      "world.goal-cycle"
+    ]
+  },
+  {
+    "id": "agent.internal",
+    "title": "Agent operating guide",
+    "source": "apps/agent-runtime/features/agent-turns/guides/agent.md",
+    "audience": "agent",
+    "workflows": [
+      "agent.bounded-turn"
+    ]
+  },
+  {
+    "id": "platform.developer",
+    "title": "Platform architecture",
+    "source": "docs/architecture/overview.md",
+    "audience": "developer",
+    "workflows": [
+      "knowledge.catalogue-integrity"
+    ]
+  },
+  {
+    "id": "knowledge.evidence.developer",
+    "title": "Knowledge verification and staleness",
+    "source": "docs/architecture/knowledge.md",
+    "audience": "developer",
+    "workflows": [
+      "knowledge.catalogue-integrity"
+    ]
+  },
+  {
+    "id": "guide.staging-configuration",
+    "title": "Configure and provision staging",
+    "source": "docs/operations/staging-configuration.md",
+    "audience": "operator",
+    "workflows": [
+      "wf.staging-provision"
+    ]
+  },
+  {
+    "id": "world.operations.guide",
+    "title": "Cloud operations and private recovery",
+    "source": "apps/world/features/operations/README.md",
+    "audience": "operator",
+    "workflows": [
+      "world.complete-recovery"
+    ]
+  },
+  {
+    "id": "agent.memory.guide",
+    "title": "Scoped private memory and replay recovery",
+    "source": "apps/agent-runtime/features/memory/README.md",
+    "audience": "agent",
+    "workflows": [
+      "agent.memory-recovery"
+    ]
+  },
+  {
+    "id": "world.model-evaluation.guide",
+    "title": "Bounded real-model readiness",
+    "source": "apps/world/features/model-evaluations/README.md",
+    "audience": "operator",
+    "workflows": [
+      "world.model-evaluation"
+    ]
+  },
+  {
+    "id": "world.remote-tools.guide",
+    "title": "Authenticated remote MCP",
+    "source": "apps/world/features/mcp/README.md",
+    "audience": "agent",
+    "workflows": [
+      "world.remote-tools"
+    ]
+  },
+  {
+    "id": "application.services.guide",
+    "title": "Scoped application data and jobs",
+    "source": "apps/execution/features/application-services/README.md",
+    "audience": "developer",
+    "workflows": [
+      "application.services"
+    ]
+  },
+  {
+    "id": "research.browser.guide",
+    "title": "Private browser research",
+    "source": "apps/execution/features/browser-research/README.md",
+    "audience": "agent",
+    "workflows": [
+      "research.browser"
+    ]
+  },
+  {
+    "id": "world.presence.guide",
+    "title": "Resident presence and public activity",
+    "source": "apps/world/features/presence/README.md",
+    "audience": "public",
+    "workflows": [
+      "world.goal-cycle"
+    ]
+  },
+  {
+    "id": "console.live-public-mirror.guide",
+    "title": "Read-only live public world",
+    "source": "tooling/features/live-view/guides/operator.md",
+    "audience": "operator",
+    "workflows": [
+      "console.live-public-view"
+    ]
+  },
+  {
+    "id": "agent.public-conversation.guide",
+    "title": "Bounded generated project conversations",
+    "source": "apps/agent-runtime/features/public-conversations/guides/developer.md",
+    "audience": "developer",
+    "workflows": [
+      "workflow.public-project-conversation"
+    ]
+  },
+  {
+    "id": "world.shared-project.guide",
+    "title": "Eight-agent shared build project",
+    "source": "docs/architecture/shared-platform.md",
+    "audience": "operator",
+    "workflows": [
+      "world.shared-build"
+    ]
+  },
+  {
+    "id": "execution.shared-project.guide",
+    "title": "Shared Artifacts publication",
+    "source": "apps/execution/features/shared-project/guides/developer.md",
+    "audience": "developer",
+    "workflows": [
+      "execution.checked-publication"
+    ]
+  },
+  {
+    "id": "world.visitor-intake.guide",
+    "title": "Public visitor intake",
+    "source": "apps/world/features/visitor-http/README.md",
+    "audience": "public",
+    "workflows": [
+      "world.visitor-suggestion"
+    ]
+  },
+  {
+    "id": "world.visitor-governance.guide",
+    "title": "Independent visitor review",
+    "source": "apps/world/features/visitor-governance/README.md",
+    "audience": "public",
+    "workflows": [
+      "world.visitor-review"
+    ]
+  },
+  {
+    "id": "world.visitor-governance.operator",
+    "title": "Operate the visitor build loop",
+    "source": "apps/world/features/visitor-governance/guides/operator.md",
+    "audience": "operator",
+    "workflows": [
+      "world.visitor-review"
+    ]
+  },
+  {
+    "id": "world.visitor-governance.developer",
+    "title": "Extend bounded visitor reviews",
+    "source": "apps/agent-runtime/features/visitor-governance/guides/developer.md",
+    "audience": "developer",
+    "workflows": [
+      "world.visitor-review"
+    ]
+  },
+  {
+    "id": "world.daily-budget.guide",
+    "title": "Daily limits and retained historical liabilities",
+    "source": "packages/domain/guides/daily-budget.md",
+    "audience": "operator",
+    "workflows": [
+      "world.dispatch-day-budget"
+    ]
+  },
+  {
+    "id": "execution.platform-baseline.guide",
+    "title": "Platform Hello World starting page",
+    "source": "apps/execution/features/visitor-baseline/README.md",
+    "audience": "developer",
+    "workflows": [
+      "world.visitor-first-presence"
+    ]
+  },
+  {
+    "id": "execution.platform-baseline.operator",
+    "title": "Reset the shared site and publish its starting page",
+    "source": "apps/execution/features/visitor-baseline/guides/operator.md",
+    "audience": "operator",
+    "workflows": [
+      "world.visitor-first-presence"
+    ]
+  },
+  {
+    "id": "world.visitor-reset.guide",
+    "title": "Canonical shared website reset",
+    "source": "apps/world/features/visitor-reset/README.md",
+    "audience": "developer",
+    "workflows": [
+      "world.visitor-first-presence"
+    ]
+  },
+  {
+    "id": "world.visitor-reset.operator",
+    "title": "Operate a fresh shared website",
+    "source": "apps/world/features/visitor-reset/guides/operator.md",
+    "audience": "operator",
+    "workflows": [
+      "world.visitor-first-presence"
+    ]
+  }
+]

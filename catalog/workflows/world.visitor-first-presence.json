@@ -1,0 +1,25 @@
+{
+  "id": "world.visitor-first-presence",
+  "title": "Reset the shared website and publish its Hello World baseline",
+  "capabilityId": "world.visitor-governance",
+  "actor": "Authenticated operator",
+  "steps": [
+    "Pause and drain active work; retain a verified private recovery snapshot",
+    "Reset shared public proposals and activity while preserving financial records",
+    "Commit and build the fixed platform Hello World page without deployment credentials",
+    "Verify staging and production responses before recording the version-one platform release"
+  ],
+  "expectedOutcomes": [
+    "Previous public proposals, reviews and messages are absent from the fresh workspace",
+    "The isolated preview shows a real checked Hello World starting page with platform provenance",
+    "Historical spending records remain intact and retries cannot clear a new workspace"
+  ],
+  "tests": [
+    "packages/domain/src/shared-reset.test.ts",
+    "apps/execution/features/visitor-baseline/pipeline.test.ts",
+    "apps/execution/features/visitor-baseline/gate.worker.ts",
+    "tests/integration/visitor-operator.test.ts",
+    "tooling/features/shared-reset/work.test.ts",
+    "apps/world/features/visitor-reset/reset.worker.ts"
+  ]
+}

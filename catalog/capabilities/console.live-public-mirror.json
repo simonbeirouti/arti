@@ -1,0 +1,22 @@
+{
+  "id": "console.live-public-mirror",
+  "title": "Local live public world and visitor intake",
+  "owner": "tooling/features/live-view",
+  "code": [
+    "tooling/features/live-view"
+  ],
+  "dependencies": [
+    "console.observation",
+    "world.authority",
+    "world.visitor-intake"
+  ],
+  "workflows": [
+    "console.live-public-view"
+  ],
+  "guides": [
+    "console.live-public-mirror.guide"
+  ],
+  "audience": [
+    "operator"
+  ]
+}

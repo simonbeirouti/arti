@@ -1,0 +1,10 @@
+{
+  "id": "world.daily-budget",
+  "title": "Daily dispatch limits with retained historical liabilities",
+  "owner": "packages/domain",
+  "code": ["packages/domain/src/daily-budget.ts", "packages/domain/src/index.ts", "packages/domain/src/evaluation-budget.ts", "packages/contracts/src/index.ts", "apps/world/src/index.ts", "apps/world/features/model-evaluations/ledger.ts"],
+  "dependencies": ["world.authority"],
+  "workflows": ["world.dispatch-day-budget"],
+  "guides": ["world.daily-budget.guide"],
+  "audience": ["operator", "developer", "agent"]
+}

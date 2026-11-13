@@ -1,0 +1,32 @@
+{
+  "id": "world.visitor-suggestion",
+  "title": "Name a visitor and submit a public suggestion",
+  "capabilityId": "world.visitor-intake",
+  "actor": "public visitor browser session",
+  "steps": [
+    "Enter a public unverified name and receive an opaque browser session",
+    "Submit a public suggestion with an idempotency key",
+    "Resolve the server-owned visitor identity and enforce intake limits",
+    "Inspect the curated shared build projection",
+    "Run bounded moderator review and independent agent votes against a frozen public proposal",
+    "Select the highest-ranked eligible proposal after the current goal finishes",
+    "Build with checked task evidence and independently inspect the exact published revision"
+  ],
+  "expectedOutcomes": [
+    "Only server-owned visitor identities are accepted",
+    "Cross-site mutations and caller-selected actors are rejected",
+    "Repeated submissions return the saved suggestion without duplicate work",
+    "Private cookies, IP hashes and operational records never enter public views",
+    "Independent task and criterion review retain publication and budget gates",
+    "Only current checked deployment evidence permits automatic completion"
+  ],
+  "tests": [
+    "apps/world/features/visitor-http/http.test.ts",
+    "apps/knowledge/src/public-world.test.ts",
+    "tests/workers/visitor-http.test.ts",
+    "tooling/features/live-view/live-view.test.ts",
+    "apps/world/features/visitor-governance/governance.test.ts",
+    "apps/agent-runtime/features/visitor-governance/governance.test.ts",
+    "tests/workers/governance.test.ts"
+  ]
+}
